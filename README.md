@@ -67,8 +67,6 @@ The objective of this project is to practise JavaScript fundamentals, DOM manipu
 
 **Ramya V**
 
-- GitHub: [ramya28112005](https://github.com/ramya28112005)
-- LinkedIn: [Ramya V](https://www.linkedin.com/in/ramya-v-b317232ba)
 
 ## 🌟 Future Improvements
 
