@@ -1,0 +1,378 @@
+
+/* General page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #f3e8ff, #fce7f3);
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    color: #292443;
+}
+
+/* Main card */
+.task-card {
+    border: none;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 55px rgba(91, 53, 165, 0.13);
+    transition: box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+    box-shadow: 0 22px 60px rgba(91, 53, 165, 0.18);
+}
+
+/* Header */
+.app-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 12px;
+    border-radius: 18px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #8b5cf6, #5b35a5);
+    box-shadow: 0 7px 18px rgba(124, 58, 237, 0.25);
+}
+
+.card-title {
+    color: #5b35a5;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.subtitle {
+    color: #77718d;
+    margin-bottom: 8px;
+}
+
+.today-date {
+    color: #8b5cf6;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* Dashboard statistics */
+.stats-row {
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    height: 100%;
+    text-align: center;
+    padding: 18px 5px;
+    border-radius: 15px;
+    transition: transform 0.25s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-4px);
+}
+
+.total-box {
+    background: #f1ebff;
+}
+
+.pending-box {
+    background: #fff5df;
+}
+
+.completed-box {
+    background: #e7f9ef;
+}
+
+.stat-icon {
+    font-size: 23px;
+}
+
+.stat-box h3 {
+    font-size: 27px;
+    font-weight: 800;
+    margin: 7px 0 3px;
+}
+
+.stat-box p {
+    font-size: 13px;
+    margin: 0;
+    color: #706a80;
+}
+
+.total-box h3 {
+    color: #7041c5;
+}
+
+.pending-box h3 {
+    color: #c47b11;
+}
+
+.completed-box h3 {
+    color: #198754;
+}
+
+/* Progress bar */
+.progress-section {
+    padding: 20px;
+    background: #faf8ff;
+    border: 1px solid #eee7fa;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.progress-heading {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 11px;
+}
+
+#progressPercentage {
+    color: #7041c5;
+}
+
+.progress-track {
+    height: 10px;
+    width: 100%;
+    background: #e8e1f4;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #a78bfa, #6d28d9);
+    transition: width 0.4s ease;
+}
+
+#progressMessage {
+    color: #817991;
+    font-size: 12px;
+    margin: 10px 0 0;
+}
+
+/* Task heading */
+.section-title {
+    font-size: 20px;
+    font-weight: 750;
+    margin-bottom: 15px;
+}
+
+/* Input */
+.task-input-group {
+    gap: 9px;
+}
+
+#todoInput {
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ded3f4;
+    border-radius: 10px !important;
+    background: #fff;
+}
+
+#todoInput:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+#addTodoButton {
+    border: none;
+    border-radius: 10px !important;
+    padding: 12px 18px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(135deg, #8b5cf6, #5b35a5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#addTodoButton:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(91, 53, 165, 0.25);
+}
+
+#message {
+    min-height: 4px;
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #dc3545;
+}
+
+/* Filter buttons */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 5px 0 18px;
+}
+
+.filter-btn {
+    border: 1px solid #e5def2;
+    border-radius: 9px;
+    padding: 8px 16px;
+    color: #706781;
+    background: #fff;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: #a78bfa;
+    color: #7041c5;
+}
+
+.filter-btn.active {
+    background: #7041c5;
+    color: #fff;
+    border-color: #7041c5;
+}
+
+/* Task list */
+#todoList {
+    padding: 0;
+    border: none;
+    gap: 10px;
+}
+
+#todoList .list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid #eee8f7;
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#todoList .list-group-item:hover {
+    background: #faf7ff;
+    transform: translateX(3px);
+}
+
+.task-check {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    accent-color: #7041c5;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    color: #39334a;
+    font-size: 14px;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.completed .task-check {
+    accent-color: #198754;
+}
+
+/* Delete button */
+#todoList .deleteButton {
+    border: none;
+    border-radius: 8px;
+    padding: 7px 11px;
+    flex-shrink: 0;
+    background: #fff0f0;
+    color: #d63345;
+    font-size: 12px;
+    transition: background 0.2s ease;
+}
+
+#todoList .deleteButton:hover {
+    background: #ffdada;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 25px 10px;
+    color: #817991;
+}
+
+.empty-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    font-size: 17px;
+    color: #514766;
+    font-weight: bold;
+}
+
+.empty-state p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* Footer */
+.footer-note {
+    border-top: 1px solid #f0ebf7;
+    margin-top: 25px;
+    padding-top: 18px;
+    text-align: center;
+    color: #9990aa;
+    font-size: 12px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .task-card {
+        padding: 22px 16px !important;
+        border-radius: 18px;
+    }
+
+    .card-title {
+        font-size: 29px;
+    }
+
+    .stat-box {
+        padding: 14px 3px;
+    }
+
+    .stat-box h3 {
+        font-size: 23px;
+    }
+
+    .stat-box p {
+        font-size: 11px;
+    }
+
+    .task-input-group {
+        flex-wrap: wrap;
+    }
+
+    #todoInput {
+        flex: 1 1 100%;
+    }
+
+    #addTodoButton {
+        width: 100%;
+    }
+
+    .filter-btn {
+        flex: 1;
+        padding: 9px 7px;
+    }
+}
